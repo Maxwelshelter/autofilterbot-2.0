@@ -9,6 +9,7 @@ BITLY_API = os.environ.get("BITLY_API", "8df1df8c23f719e5cf97788cc2d40321ea30092
 CUTTLY_API = os.environ.get("CUTTLY_API", "4930f225215bdb46c6be5d969700a5a9fd2ff")
 SHORTCM_API = os.environ.get("SHORTCM_API", "pk_...NIZv")
 GPLINKS_API = os.environ.get("GPLINKS_API", "681bf6ed2bdc16d93cdc6842be62a1baf6364e82")
+SHRINKME_API = os environ.get("SHRINKME_API", "8a6af6d6a315d052b577eefb4bd030ba7b7ec13a")
 
 reply_markup = InlineKeyboardMarkup(
         [[
@@ -171,6 +172,18 @@ async def short(link):
                 shorten_urls += f"\n**GPLinks.in :-** {url}"
     except Exception as error:
         print(f"GPLink error :- {error}")
+
+    # Shrinkme shorten
+    try: 
+        api_url = "https://shrinkme.io/api"
+        params = {'api': SHRINKME_API, 'url':link}
+        async with aiohttp.ClientSession() as session:
+            async with session.get(api_url, params=params, raise_for_status=True) as response:
+                data = await response.json()
+                url = data["shortenedUrl"]
+                shorten_urls += f"\n**shrinkme.io :-** {url}"
+    except Exception as error:
+        print(f"shrinkme error :- {error}")
     
     # Send the text
     try:
