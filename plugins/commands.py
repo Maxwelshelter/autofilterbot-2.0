@@ -98,7 +98,14 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('💥 𝙾𝚆𝙽𝙴𝚁 💥', url='https://t.me/DTG_Admin_bot'), 
             InlineKeyboardButton('📢 𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢', url='https://t.me/DTG_BOTS')
-            ],[      
+            ],[    
+            InlineKeyboardButton ('🎬 Request Group 🎬', url='https://t.me/Movie_Search_bot_hindi')
+
+            ],[
+
+            InlineKeyboardButton ('🗂️ New Movie Alert 🗂️', url='https://t.me/DTG_Movies')
+
+            ],[
             InlineKeyboardButton('ℹ️ 𝙷𝙴𝙻𝙿 ℹ️', callback_data='help'),
             InlineKeyboardButton('💫 𝙰𝙱𝙾𝚄𝚃 💫', callback_data='about')
         ]]
