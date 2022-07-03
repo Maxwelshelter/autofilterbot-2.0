@@ -1438,11 +1438,11 @@ async def auto_filter(client, msg, spoll=False):
             await hmm.edit_text(text=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ {search} Cʟᴏꜱᴇᴅ 🗑️", disable_notification = True)
         except Exception as e:
             logger.exception(e)
-            fek = await message.reply_photo(photo="https://telegra.ph/file/82b5bbbab6d5e5593b6b2.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+            fek = await message.reply_photo(photo="https://te.legra.ph/file/6bc74d66a2826659d22b4.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
             await asyncio.sleep(IMDB_DELET_TIME)
             await fek.edit_text(text=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ {search} Cʟᴏꜱᴇᴅ 🗑️")
     else:
-        fuk = await message.reply_photo(photo="https://telegra.ph/file/8b42f6caf6ef5fd76766f.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
+        fuk = await message.reply_photo(photo="https://te.legra.ph/file/6bc74d66a2826659d22b4.jpg", caption=cap, reply_markup=InlineKeyboardMarkup(btn))
         await asyncio.sleep(IMDB_DELET_TIME)
         await fuk.delete()
         await message.reply_text(text=f"⚙️ Fɪʟᴛᴇʀ Fᴏʀ {search} Cʟᴏꜱᴇᴅ 🗑️")
