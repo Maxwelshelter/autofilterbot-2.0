@@ -194,7 +194,15 @@ async def next_page(bot, query):
             ]
             for file in files
         ]
+    btn.insert(0, 
 
+        [
+
+            InlineKeyboardButton("🌟 𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🌟",url="https://t.me/DTG_TV"),
+            InlineKeyboardButton("🔺 𝐁𝐎𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🔺",url="https://t.me/DTG_BOTS")
+        ]
+
+    )
     if 0 < offset <= 6:
         off_set = 0
     elif offset == 0:
