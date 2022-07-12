@@ -217,7 +217,8 @@ async def next_page(bot, query):
         ],[
              InlineKeyboardButton("⬅️ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f"📄 𝗣𝗮𝗴𝗲 {round(int(offset) / 10) + 1} / {round(total / 10)}",
-                                  callback_data="pages")]
+                                  callback_data="pages")
+        ]
         )
     elif off_set is None:
         btn.append(
@@ -225,7 +226,8 @@ async def next_page(bot, query):
 
              InlineKeyboardButton("🌟𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋🌟",url="https://t.me/DTG_TV"),
 
-            ],[
+            ],
+            [
 
              InlineKeyboardButton(f"📄 𝗣𝗮𝗴𝗲 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
              InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")])
@@ -1382,8 +1384,8 @@ async def auto_filter(client, msg, spoll=False):
             ],
             [
                 InlineKeyboardButton(
-                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'
-                ),
+                    text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'),
+        
             ]
             for file in files
         ]
