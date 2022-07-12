@@ -198,8 +198,8 @@ async def next_page(bot, query):
 
         [
 
-            InlineKeyboardButton("🌟 𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🌟",url="https://t.me/DTG_TV"),
-            InlineKeyboardButton("🔺 𝐁𝐎𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🔺",url="https://t.me/DTG_BOTS")
+            InlineKeyboardButton(f"🌟 𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 🌟",url="https://t.me/DTG_TV"),
+            InlineKeyboardButton(f"🔺 𝐁𝐎𝐓 𝐔𝐏𝐃𝐀𝐓𝐄𝐒 🔺",url="https://t.me/DTG_BOTS")
         ]
 
     )
