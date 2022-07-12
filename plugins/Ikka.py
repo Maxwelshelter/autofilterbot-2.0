@@ -26,11 +26,11 @@ IKKA_STRINGS = (
 
 
 @Client.on_message(
-    filters.command("ikka", COMMAND_HAND_LER) &
+    filters.command("meme", COMMAND_HAND_LER) &
     f_onw_fliter
 )
 async def ikka(_, message):
-    """ /ikka strings """
+    """ /meme strings """
     effective_string = random.choice(IKKA_STRINGS)
     if message.reply_to_message:
         await message.reply_to_message.reply_sticker(effective_string)
