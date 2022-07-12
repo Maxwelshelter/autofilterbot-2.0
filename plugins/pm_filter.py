@@ -203,6 +203,7 @@ async def next_page(bot, query):
         ]
 
     )
+    
     if 0 < offset <= 6:
         off_set = 0
     elif offset == 0:
@@ -211,7 +212,10 @@ async def next_page(bot, query):
         off_set = offset - 6
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⬅️ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
+        [
+             InlineKeyboardButton("🌟𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋🌟",url="https://t.me/DTG_TV"),
+        ],[
+             InlineKeyboardButton("⬅️ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f"📄 𝗣𝗮𝗴𝗲 {round(int(offset) / 10) + 1} / {round(total / 10)}",
                                   callback_data="pages")]
         )
