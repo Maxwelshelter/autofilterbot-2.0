@@ -212,9 +212,9 @@ async def next_page(bot, query):
         off_set = offset - 6
     if n_offset == 0:
         btn.append(
+       
+
         [
-             InlineKeyboardButton("🌟𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋🌟",url="https://t.me/DTG_TV"),
-        ],[
              InlineKeyboardButton("⬅️ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
              InlineKeyboardButton(f"📄 𝗣𝗮𝗴𝗲 {round(int(offset) / 10) + 1} / {round(total / 10)}",
                                   callback_data="pages")
@@ -222,22 +222,22 @@ async def next_page(bot, query):
         )
     elif off_set is None:
         btn.append(
-            [
+           
 
-             InlineKeyboardButton("🌟𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋🌟",url="https://t.me/DTG_TV"),
+           
 
-            ],
+
             [
 
              InlineKeyboardButton(f"📄 𝗣𝗮𝗴𝗲 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
              InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
-            [
+            
 
-             InlineKeyboardButton("🌟𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋🌟",url="https://t.me/DTG_TV"),
+           
 
-            ],
+          
             [
                 InlineKeyboardButton("⬅️ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"📄 𝗣𝗮𝗴𝗲 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
@@ -1377,11 +1377,11 @@ async def auto_filter(client, msg, spoll=False):
     pre = 'filep' if settings['file_secure'] else 'file'
     if settings["button"]:
         btn = [
-            [
+            
 
-             InlineKeyboardButton("🌟𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋🌟",url="https://t.me/DTG_TV"),
+       
 
-            ],
+
             [
                 InlineKeyboardButton(
                     text=f"[{get_size(file.file_size)}] {file.file_name}", callback_data=f'{pre}#{file.file_id}'),
@@ -1391,11 +1391,11 @@ async def auto_filter(client, msg, spoll=False):
         ]
     else:
         btn = [
-            [
+            
 
-             InlineKeyboardButton("🌟𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋🌟",url="https://t.me/DTG_TV"),
+           
 
-            ],
+           
             [
                 InlineKeyboardButton(
                     text=f"{file.file_name}",
@@ -1413,20 +1413,20 @@ async def auto_filter(client, msg, spoll=False):
         key = f"{message.chat.id}-{message.message_id}"
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
-        btn.append([
+        btn.append(
 
-             InlineKeyboardButton("🌟𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋🌟",url="https://t.me/DTG_TV"),
+            
 
-            ],
+           
             [InlineKeyboardButton(text=f"📄 𝗣𝗮𝗴𝗲 1/{round(int(total_results) / 6)}", callback_data="pages"),
              InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{offset}")]
         )
     else:
-        btn.append([
+        btn.append(
 
-             InlineKeyboardButton("🌟𝐌𝐀𝐈𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋🌟",url="https://t.me/DTG_TV"),
+           
 
-            ],
+  
             [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
         )
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
